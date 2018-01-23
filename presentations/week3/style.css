@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=News+Cycle');
+</style>
+</style>
+/* Eric Meyer CSS Reset begins*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* Eric Meyer CSS Reset ends */
+
+body{
+  background-image: url(pyramid.png);
+  background-repeat: repeat;
+}
+.mainDiv{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+
+p, h2, header{
+  margin-bottom: 20px;
+}
+
+
+h1{
+  font-family: 'News Cycle', sans-serif;
+  color: black;
+  font-size: 30px;
+
+  text-align: center;
+  line-height:100px;
+
+}
+
+h1:hover{
+  color: pink;
+  transition: all 0.5s ease-in-out;
+
+}
+h2,h3{
+  font-family: 'News Cycle', sans-serif;
+  font-size: 10px;
+  text-align: center;
+  color: black;
+}
+
+.container, footer{
+  font-family: 'News Cycle', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  line-height: 15px;
+  color: black;
+
+}
+img{
+  height: 260px;
+  width:260px;
+}
