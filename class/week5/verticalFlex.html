@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vertical flex</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style media="screen">
+      .height1{
+        height: 75px;
+      }
+      .height2{
+        height: 600px;
+      }
+      .height3{
+        height: 150px;
+      }
+      .height4{
+        height: 25px;
+      }
+      .flexSingleItem{ /*center the child element, put on the parent container*/
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .flexSpaceAround{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .flexVertSpaceAround{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+      }
+      ul li{
+        list-style: none;
+        text-transform: uppercase;
+      }
+      ul li a,ul li a:hover{
+        text-decoration: none;
+
+      }
+      .header{
+        line-height: 75px;
+      }
+      .background{
+        background-image: url(gplaypattern.png);
+      }
+      .backcolour{
+        background-color: rgb(236, 220, 227);
+      }
+
+    </style>
+  </head>
+  <body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 height1 header background">
+      <ul class="flexSpaceAround">
+        <li> <a href="#">Home</a> </li>
+        <li> <a href="#">Coffee</a> </li>
+        <li> <a href="#">Tea</a> </li>
+        <li> <a href="#">Liquor</a> </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4  height2 flexVertSpaceAround">
+      <img src="caffe.png" alt="coffee">
+      <img src="cha.jpg" alt="tea">
+      <img src="liqs.png" alt="liquor">
+    </div>
+    <div class="col-md-8 backcolour height2">
+      <div class="row">
+        <div class="col-md-6 height3 flexSingleItem">
+            <div>
+              In the morning when you have had a nice night out, the way to put
+              your life back together is by drinking coffee.
+              This is what you drink in the morning to get your day started,
+              even when you're not hungover. But either way, this is a start.
+            </div>
+        </div>
+        <div class="col-md-6 height3">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 height3 flexSpaceAround">
+          <div>
+            Tea has been an important beverage
+            for thousands of years and has been a
+            huge part of culture in countries around
+            the world, forming major parts of ceremonies,
+            trade routes and even starting revolutions. But
+            tea isn’t just appreciated for its good taste
+            and worldwide appeal, it also offers numerous health benefits.
+          </div>
+        </div>
+        <div class="col-md-6 height3 flexSpaceAround">
+          <div>
+            Places that you can get coffee and teas: Starbucks, Tim Hortons, Coffee Time,
+            GH Cafe, Humber Cafeteria, David's Tea, Teavana.
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 randomColor height3"></div>
+        <div class="col-md-6 randomColor height3"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 randomColor height3"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 height4 background flexSingleItem">
+      <div>
+        Copyright Ivy Yu 2018 University of Guelph Humber
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      //when the document is loaded
+      $(document).ready(function() {
+        //this function gets a random color between 0 and 255
+        function getRandomColor() {
+          return Math.floor(Math.random() * 255);
+        }
+        //get all the elements (divs) with the class randomColor
+        var randomColor = $(".randomColor");
+
+        //loop through all elements
+        //for each element change the css backhround color to RGB + three random colours
+        $.each(randomColor, function(index, item) {
+          $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+        })
+
+      })
+    </script>
+  </body>
+</html>
