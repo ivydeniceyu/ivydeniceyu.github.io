@@ -1,0 +1,42 @@
+[
+  {
+    "vegetable":"bean sprouts",
+    "protein":"tofu",
+    "base":"quinoa",
+    "sauce":"hoisin sauce",
+    "topping":"seasame seed",
+    "wristTwist": false
+  },
+  {
+    "vegetable":"peas",
+    "protein":"chicken",
+    "base":"brown rice",
+    "sauce":"soy sauce",
+    "topping":"sunflower seeds",
+    "wristTwist": true
+  },
+  {
+    "vegetable":"carrots",
+    "protein":"beef",
+    "base":"white rice",
+    "sauce":"sriracha",
+    "topping":"wonton",
+    "wristTwist": false
+  },
+  {
+    "vegetable":"lettuce",
+    "protein":"chicken",
+    "base":"jasmine rice",
+    "sauce":"seasame sauce",
+    "topping":"seasame seeds",
+    "wristTwist": true
+  },
+  {
+    "vegetable":"none",
+    "protein":"eggs",
+    "base":"quinoa",
+    "sauce":"ketchup",
+    "topping":"green onions",
+    "wristTwist": false
+  }
+]

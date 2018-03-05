@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>carousel</title>
+  <title>carousel3</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
   <div class="container">
     <div class="row">
       <!-- drop the code-->
@@ -31,32 +32,9 @@
           <li data-target="#carousel-example-generic" data-slide-to="2"></li>
         </ol>
 
-        <!-- Wrapper for slides -->
+        <!-- Wrapper for data -->
         <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img src="https://images.unsplash.com/photo-1446728059026-a57bee198e0e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a39623dc75acfbb1eee96f4101e73ce4&auto=format&fit=crop&w=1350&q=80" alt="Honest Ed's">
-            <div class="carousel-caption">
-              Honest Ed's in Toronto
-            </div>
-          </div>
-          <div class="item">
-            <img src="https://images.unsplash.com/photo-1517501778092-ff97cac9cc2c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=839eff858d161658405b416c460ada8d&auto=format&fit=crop&w=1378&q=80" alt="Queen Station">
-            <div class="carousel-caption">
-              Queen Station Toronto
-            </div>
-          </div>
-          <div class="item">
-            <img src="https://images.unsplash.com/photo-1435536822168-639c33ca2eab?ixlib=rb-0.3.5&s=adaf2a34b19969678b97dcd54c8009d3&auto=format&fit=crop&w=1350&q=80" alt="Bay Stn">
-            <div class="carousel-caption">
-              Bay Station in Toronto
-            </div>
-          </div>
-          <div class="item">
-            <img src="https://images.unsplash.com/photo-1460398160830-bd2f5309bea9?ixlib=rb-0.3.5&s=03d6da4d66c45579a9700415929f4a76&auto=format&fit=crop&w=1338&q=80" alt="TTC Subway">
-            <div class="carousel-caption">
-              TTC Subway Toronto
-            </div>
-          </div>
+
         </div>
 
         <!-- Controls -->
@@ -70,11 +48,46 @@
         </a>
       </div>
     </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  //get JSON
+
+var url
+="https://andersonguelphjs.github.io/class/week8/assets/carousel.json"
+  $.getJSON(url).done(function(data){
+    console.log("success! ");
+    console.dir(data);
+    // paste everything here
+    var dataHtml = "";
+    for (var i = 0; i < data.length; i++) {
+      console.log("i " + i);
+      dataHtml += '<div class="'+data[i].class+'">'
+        +'<img src="'+data[i].source+'" alt="">'
+        +'<div class="carousel-caption">'
+        + data[i].caption
+        +'</div>'
+        +'</div>';
+    }
+    console.log(dataHtml);
+
+    $(document).ready(function(){
+      $(".carousel-inner").html(dataHtml);
+      //we need to explicitly call the boostrap fucntion carousel
+      $(".carousel").carousel();
+    })
+
+  }).fail(function(data){
+    console.log("failed! "+JSON.stringify(data));
+  });
+
+
+
+  </script>
 </body>
 
 </html>
