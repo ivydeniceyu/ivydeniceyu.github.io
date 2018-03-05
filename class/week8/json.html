@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>theArray</title>
+  <style media="screen">
+    .height1 {
+      height: 75px;
+    }
+
+    .height2 {
+      height: 600px;
+    }
+  </style>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1 randomColor">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 randomColor">
+
+      </div>
+      <div class="col-md-8  output">
+
+      </div>
+      <div class="col-md-2 randomColor">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 height1 randomColor">
+
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //get a random color between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+
+      var randomColor = $(".randomColor");
+
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+      })
+
+    })
+  </script>
+
+  <script>
+    var theArray = [
+      {
+        "vegetable":"bean sprouts",
+        "protein":"tofu",
+        "base":"quinoa",
+        "sauce":"hoisin sauce",
+        "topping":"seasame seed",
+        "wristTwist": false
+      },
+      {
+        "vegetable":"peas",
+        "protein":"chicken",
+        "base":"brown rice",
+        "sauce":"soy sauce",
+        "topping":"sunflower seeds",
+        "wristTwist": true
+      },
+      {
+        "vegetable":"carrots",
+        "protein":"beef",
+        "base":"white rice",
+        "sauce":"sriracha",
+        "topping":"wonton",
+        "wristTwist": false
+      },
+      {
+        "vegetable":"lettuce",
+        "protein":"chicken",
+        "base":"jasmine rice",
+        "sauce":"seasame sauce",
+        "topping":"seasame seeds",
+        "wristTwist": true
+      },
+      {
+        "vegetable":"none",
+        "protein":"eggs",
+        "base":"quinoa",
+        "sauce":"ketchup",
+        "topping":"green onions",
+        "wristTwist": false
+      }
+    ]
+;
+
+    $(document).ready(function() {
+      //$(".output").html("test output");
+      var html = "<table class='table table-striped table-hover'>" +
+        "<tr>" +
+        "<th>vegetable</th>" +
+        "<th>protein</th>" +
+        "<th>base</th>" +
+        "<th>sauce</th>" +
+        "<th>topping</th>" +
+        "<th>wristTwist</th>" +
+        "</tr>";
+
+      //here is the loop of the array 'cats'
+      for (var i = 0; i < theArray.length; i++) {
+
+        html += "<tr>" +
+          "<td> "+ theArray[i].vegetable + "</td>" +
+          "<td>" + theArray[i].protein + "</td>" +
+          "<td>" + theArray[i].base + "</td>" +
+          "<td>" + theArray[i].sauce + "</td>" +
+          "<td>" + theArray[i].topping + "</td>" +
+          "<td>" + theArray[i].wristTwist + "</td>" +
+          "</tr>";
+      }
+      html += "</table>";
+      $(".output").html(html);
+
+    });
+  </script>
+
+</body>
+
+</html>
