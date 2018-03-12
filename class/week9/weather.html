@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WEATHER</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style media="screen">
+    @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:300,400');
+    .weatherDiv {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-family: 'Abril Fatface', cursive;
+    }
+
+    .wi {
+      font-size: 3em;
+      color:#FF9C8F;
+    }
+
+    .flexSingleItem {
+      /*center the child element, put on the parent container*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flexSpaceAround {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .flexVertSpaceAround {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+    }
+
+body{
+  background-color: black;
+}
+
+    h1 {
+      font-family: 'Abril Fatface', cursive;
+      font-size: 40px;
+      color: #CC9072;
+    }
+
+    h2 {
+      font-family: 'Abril Fatface', cursive;
+      font-size: 30px;
+      text-transform: uppercase;
+            color: grey;
+    }
+
+    .upperCase {
+      text-transform: uppercase;
+      font-size: 25px;
+            color: grey;
+    }
+
+    p {
+      font-size: 12px;
+            color: #7F746E;
+
+    }
+    .thingsToDo{
+      font-size: 12px;
+          color: #7F746E;
+
+    }
+    .text{
+      color: #7F746E;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="flexSpaceAround">YOUR STAY IN TORONTO</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 weatherDiv flexSpaceAround"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row flexSpaceAround">
+          <h2>Itinerary</h2>
+        </div>
+        <div class="row">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non velit eros. Quisque a semper nisl. Sed posuere lectus mi, in laoreet nibh mollis eu. Donec ac risus sit amet neque interdum ullamcorper eget vel nibh. Maecenas ultrices quam
+            a consectetur condimentum. Vestibulum sed fermentum ante. Aliquam tempus posuere ipsum. Sed tempor enim et nisl ultricies eleifend. Nunc porta pellentesque finibus. Integer vitae tristique dolor. Nulla hendrerit sit amet est quis placerat.
+            Vivamus volutpat massa vitae nisi porttitor, quis suscipit felis fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+          <p>Proin volutpat vehicula pulvinar. Curabitur vel ex in lorem convallis interdum ac ac nunc. Integer consectetur urna ullamcorper, ultricies lorem ac, tempor velit. Morbi a purus ipsum. Sed ligula risus, sollicitudin quis felis id, tincidunt vulputate
+            sem. Mauris pretium condimentum quam, varius blandit dui hendrerit vel. In maximus ipsum eget neque viverra vulputate varius ut nisl.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row flexSpaceAround">
+          <h2>Things To Do</h2>
+        </div>
+        <div class="row thingsToDo">
+          <p>
+            Vestibulum pulvinar rhoncus ante, eget bibendum dui laoreet vel. Vestibulum a rutrum dui, tincidunt vestibulum leo. Sed malesuada laoreet semper. Aliquam commodo pretium dui. Integer laoreet fermentum arcu sit amet commodo. Fusce mattis, tortor euismod
+            laoreet ultrices, quam neque ultrices tellus, sed imperdiet justo tellus quis dui. Sed malesuada est nulla, nec imperdiet lacus semper a. Proin cursus sit amet lorem a tristique. Sed ut tincidunt sem. Nullam euismod euismod sagittis. Aliquam
+            a sodales massa. Aliquam malesuada purus elit, in malesuada leo aliquet nec. Nam eget dui vel magna condimentum auctor sit amet at elit. Vivamus malesuada, urna
+            in venenatis fringilla, ex est ultricies massa, nec varius quam urna vitae dolor:
+          </p>
+          <div class="list">
+            <ul>
+              <li>Cras nec tortor ipsum</li>
+              <li>Aenean imperdiet</li>
+              <li>In commodo urna eu luctus</li>
+              <li>Maecenas lacinia</li>
+              <li>Tiam vel erat elementum</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+    var iconClasses = {
+      "Rain And Snow": "wi-rain-mix",
+      "Mostly Cloudy": "wi-cloudy",
+      "Breezy": "wi-windy",
+      "Partly Cloudy": "wi-day-cloudy-high",
+      "Mostly Sunny": "wi-day-sunny"
+
+    }
+
+
+
+
+    var url =
+      "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22toronto%2C%20ON%22)%20and%20u%3D'c'&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";
+
+    function processForecast(f) {
+      console.log("forecast");
+      console.dir(f);
+      var html = "";
+
+      for (var i = 0; i < f.length; i++) {
+
+        console.log("i" + i);
+        html += "<div class='dayOfWeek'>"
+        html += "<div class='upperCase'>" + f[i].day + "</div>";
+        html += "<div class='text'>" + f[i].date + "</div>";
+        html += "<div class='text'>" + f[i].text + "</div>";
+        html += "<i class='wi " + iconClasses[f[i].text] + "'></i>";
+        html += "</div>"
+      }
+      $(document).ready(function() {
+        $(".weatherDiv").html(html);
+      })
+    }
+    $.get(url)
+      .done(function(data) { //SUCCESS
+        console.log("success!");
+        console.dir(data);
+        //access nested objects within
+        var forecast = data.query.results.channel.item.forecast;
+        processForecast(forecast);
+      })
+      .fail(function(data) { //FAIL
+        console.log('fail');
+        console.dir(data);
+      })
+  </script>
+
+</body>
+
+</html>
