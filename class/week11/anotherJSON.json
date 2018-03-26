@@ -1,0 +1,34 @@
+{
+  "Sheet1": {
+    "1": {
+      "itemId": 1,
+      "ivyYuTitle": "bellini",
+      "ivyYuPrice": 8,
+      "ivyYuImgUrl": "ivydeniceyu.github.io/class/week11/img/bellini.jpg"
+    },
+    "2": {
+      "itemId": 2,
+      "ivyYuTitle": "daquiri",
+      "ivyYuPrice": 8,
+      "ivyYuImgUrl": "ivydeniceyu.github.io/class/week11/img/daq.jpg"
+    },
+    "3": {
+      "itemId": 3,
+      "ivyYuTitle": "dirty martini",
+      "ivyYuPrice": 9,
+      "ivyYuImgUrl": "ivydeniceyu.github.io/class/week11/img/martini.jpg"
+    },
+    "4": {
+      "itemId": 4,
+      "ivyYuTitle": "pina colada",
+      "ivyYuPrice": 8,
+      "ivyYuImgUrl": "ivydeniceyu.github.io/class/week11/img/pina.jpg"
+    },
+    "5": {
+      "itemId": 5,
+      "ivyYuTitle": "zinfandel",
+      "ivyYuPrice": 11,
+      "ivyYuImgUrl": "ivydeniceyu.github.io/class/week11/img/zin.png"
+    }
+  }
+}
