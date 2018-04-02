@@ -154,10 +154,25 @@ var spriteImages = [{
   {
     "spriteMapUrl": "lighting.png",
     "numFrames": 8,
-    "width": 1000,
+    "width": 1024,
     "height": 512,
-    "name": "brit"
-  }
+    "name": "lightening"
+  },
+  {
+    "spriteMapUrl": "https://sydneygang.github.io/class/images/walk.png",
+    "numFrames": 8,
+    "width": 1472,
+    "height": 325,
+    "name": "walk"
+  },
+  {
+    "spriteMapUrl": "https://amiraarshad.github.io/class/week12/animation/images/liam.png",
+    "numFrames": 7,
+    "width": 2732,
+    "height":1417,
+    "name": "liam"
+  },
+
 ];
 var animations = []; //an array to hold the currently existing sprite obects
 var maxAnimations = spriteImages.length; //how many animations we want on the screen at any one time
